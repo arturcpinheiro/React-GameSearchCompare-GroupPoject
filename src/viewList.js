@@ -116,22 +116,9 @@ class ViewList extends React.Component {
                     )
                 }
                 else {
-                    const setCardView = props => {
-                        props.cardView = true;
-                        props.tableView = false;
-                        console.log(props);
-                    }
-
-                    const setTableView = props => {
-                        props = true;
-                    }
-                    // <div class="btn-group float-right" role="group" aria-label="Basic example">
-                    //     <button type="button" class="btn btn-primary" onClick={() => setCardView(this.state)}><i class="fa fa-th-large" aria-hidden="true"></i> Card View</button>
-                    //     <button type="button" class="btn btn-danger" onClick={() => setTableView(this.state.tableView)}><i class="fa fa-table" aria-hidden="true"></i> Table View</button>
-                    // </div>
                     return (
                         <div>
-                            <h2>Top 20 Most Viewed Games!</h2>
+                            <h2 class="headTask">Top 20 Most Viewed Games!</h2>
                             {this.state.tableView == true && <DisplayList rrows={this.state.rrows} forceUpdate={forceUpdate} gamesList={this.state.gamesList} isLoaded={this.state.isLoaded} />}
                         </div>
                     )
@@ -140,67 +127,6 @@ class ViewList extends React.Component {
         }
     }
 
-}
-/*
-                            <div class="btn-group float-right" role="group" aria-label="Basic example">
-                                <button type="button" class="btn btn-primary" onClick={() => setCardView(this.state)}><i class="fa fa-th-large" aria-hidden="true"></i> Card View</button>
-                                <button type="button" class="btn btn-danger" onClick={() => setTableView(this.state.tableView)}><i class="fa fa-table" aria-hidden="true"></i> Table View</button>
-                            </div>
-<div class = "row">
-    <div class = "card-deck">
-        <div class = "card">
-            <img src = {this.state.history[0].thumb} class = "card-img-top"/>
-            <div class = "card-body">
-                <h4>{this.state.history[0].name}</h4>
-                <p><b>Price: </b>{this.state.history[0].salePrice}</p>
-            </div>
-            <div class = "card-footer">
-            <small class="text-muted">{day} | {time}</small>
-            </div>
-        </div>
-        <div class = "card">
-            <img src = {this.state.history[9].thumb} class = "card-img-top"/>
-            <div class = "card-body">
-                <h4>{this.state.history[0].name}</h4>
-                <p><b>Price: </b>{this.state.history[0].salePrice}</p>
-            </div>
-            <div class = "card-footer">
-            <small class="text-muted">{day} | {time}</small>
-            </div>
-        </div>
-    </div>
-</div>
- */
-
-const DisplayCardView = (props) => {
-    return (
-        <div>
-            <div class="row">
-                <div class="card-deck">
-                    <div class="card">
-                        <img src={props.history[0].thumb} class="card-img-top" />
-                        <div class="card-body">
-                            <h4>{props.history[0].name}</h4>
-                            <p><b>Price: </b>{props.history[0].salePrice}</p>
-                        </div>
-                        <div class="card-footer">
-                            <small class="text-muted">Wed, Jan 20 | 11:59PM</small>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <img src={props.history[9].thumb} class="card-img-top" />
-                        <div class="card-body">
-                            <h4>{props.history[0].name}</h4>
-                            <p><b>Price: </b>{props.history[0].salePrice}</p>
-                        </div>
-                        <div class="card-footer">
-                            <small class="text-muted">Wed, Jan 20 | 11:59PM</small>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    )
 }
 const DisplayList = (props) => {
     if ( props.isLoaded) {
