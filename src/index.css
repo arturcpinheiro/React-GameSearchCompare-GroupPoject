@@ -1,0 +1,67 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+.review {
+  display:flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.btn {
+  flex: 1;
+}
+
+.line {
+  border: none;
+}
+
+.banner {
+  max-height: 420.488px;
+  object-fit: cover;
+}
+
+.storeImg {
+  width: 8rem;
+}
+
+.card {
+  max-height: 420.488;
+}
+/*
+#dealsTable {
+  width: 65%;
+}
+*/
+#badge {
+  font-size: small;
+}
+
+.fa-heart-o {
+  color: red;
+  cursor: pointer;
+}
+
+.fa-heart {
+  color: red;
+  cursor: pointer;
+}
+
+.fa-bell-slash {
+  color: black;
+  cursor: pointer;
+}
+.fa-bell-on {
+  color: black;
+  cursor: pointer;
+}
